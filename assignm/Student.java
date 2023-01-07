@@ -9,10 +9,10 @@ package assignm;
 
 public class Student {
     //initiailise variables zone
-    Integer index;
-    String SID;
-    String firstName;
-    String lastName;
+    public Integer index;
+    public String SID;
+    public String firstName;
+    public String lastName;
     //constructor
     public Student(){
         this.index = -1;
@@ -74,8 +74,8 @@ public class Student {
     public String toString(){
     String str = "string not found";
         if(this.lastName == null){
-            str = String.format("[  | " + this.SID + " | " + this.firstName + " ]", str, null);
-        }else return "[ " + this.index + " | " + this.SID + " | " + this.firstName + " " + this.lastName + " ]";
+            str = String.format("[ %3s ", this.index) + String.format("  | %s ", this.SID) + String.format("| %38s ] ", this.firstName) + "no last name";
+        }else str = String.format("[ %3s ", this.index) + String.format("  | %s ", this.SID) + String.format("| %15s ", this.firstName) +String.format("| %20s ] ", this.lastName);
         return str;
     }
 }

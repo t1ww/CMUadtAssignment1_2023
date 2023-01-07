@@ -48,7 +48,7 @@ public class assignment1 {
             //myStudents >> [STUDENT1, STUDENT2(object id)]
         //sort
         if(args.length > 0) { // if got argument
-        System.out.print("After sorting by : ");
+        System.out.print("\nAfter sorting by : ");
             switch(args[0]){ // switch by arguments 
                 case "-n" :// student number (sid)
                     System.out.println("student number (sid)");
