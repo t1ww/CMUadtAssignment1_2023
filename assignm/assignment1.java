@@ -4,7 +4,7 @@
  * written on 1/7/2023
  * https://github.com/t1ww
  */ 
-package t4;
+package assignm;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,7 +14,7 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
-public class t4adt {
+public class assignment1 {
     public static void main(String[] args) throws FileNotFoundException {
         System.out.println("\n//////////////new run////////////////\n");//buffer new run
         Vector<Student> myStudents = new Vector<Student>();
@@ -47,25 +47,28 @@ public class t4adt {
             showVectorLists(myStudents);
             //myStudents >> [STUDENT1, STUDENT2(object id)]
         //sort
+        if(args.length > 0) { // if got argument
         System.out.print("After sorting by : ");
-        switch(args[0]){
-            case "-n" :// student number (sid)
-                System.out.println("student number (sid)");
-            break;
-            case "-f" :
-                System.out.println("First name");
-            break;
-            case "-l" :
-                System.out.println("last name");
-            break;
-            default:
-                System.out.println("no argument found, skipped sorting /");
-            break;
-        }
-            
-            sort(myStudents, "firstName");
+            switch(args[0]){ // switch by arguments 
+                case "-n" :// student number (sid)
+                    System.out.println("student number (sid)");
+                    sort(myStudents, "SID");
+                break;
+                case "-f" :// first name
+                    System.out.println("First name");
+                    sort(myStudents, "firstName");
+                break;
+                case "-l" :// last name
+                    System.out.println("last name");
+                    sort(myStudents, "lastName");
+                break;
+                default:// wrong argument
+                    System.out.println("no argument found or wrong argument, skipped sorting /");
+                break;
+            }
             //lists after sorted
             showVectorLists(myStudents);
+        }
             //program end
             scan.close();//clean up
             System.out.println("\n//////////////////////////////");

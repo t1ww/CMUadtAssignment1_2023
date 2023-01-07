@@ -5,7 +5,7 @@
  * https://github.com/t1ww
  */
 
-package t4;
+package assignm;
 
 public class Student {
     //initiailise variables zone
