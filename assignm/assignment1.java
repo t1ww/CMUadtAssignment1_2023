@@ -18,10 +18,16 @@ public class assignment1 {
     public static void main(String[] args) throws FileNotFoundException {
         System.out.println("\n//////////////new run////////////////\n");//buffer new run
         Vector<Student> myStudents = new Vector<Student>();
-        File f = new File("student_list_65.csv");
+        File f = new File("student_list_65.csv"); // copy file path and put it here
+        // 1st way in vscode you can simply right-click the csv file you have and then click <copy relative path> if the file is in the same directory
+        // 2nd way you can click <copy path> and it will give you path with backslash <\> which would not work
+        // to fix the 2nd way you need to change backslash <\> with normal slash </> or add another backslash <\> to every backslash <\> in the path
+        // example : when copy you get this "D:\Camt\araimairu\t2\student_list_65.csv"
+        // change to this : "D:/Camt/araimairu/t2/student_list_65.csv"
+        // or : "D:\\Camt\\araimairu\\t2\\student_list_65.csv"
         Scanner scan = new Scanner(f);
-        //with every lines in the csv, seperate tokens into different datas and put into student object
-        //read csv line by line
+        // with every lines in the csv, seperate tokens into different datas and put into student object
+        // read csv line by line
             while(scan.hasNextLine()){
                 String dataLine = scan.nextLine();
                 StringTokenizer token = new StringTokenizer(dataLine, ",");
@@ -30,23 +36,23 @@ public class assignment1 {
                 String firstName = token.nextToken();
                 String lastName = "";
                 Student myStudent;
-                //put tokens into temporary object
-                if(token.hasMoreTokens()){ //if has last name
+                // put tokens into temporary object
+                if(token.hasMoreTokens()){ //if has last name, we put last name value in normally
                     lastName = token.nextToken();
                     myStudent = new Student(index,SID,firstName,lastName);
-                }else{// dont have last name
+                }else{// dont have last name, we simply dont put lastName value
                     lastName = "";
                     myStudent = new Student(index,SID,firstName);
                 }
-                //add temp object into dynamic array
+                // add temp object into dynamic array
                 myStudents.add(myStudent);
             }
-        ///output // ex. [ 0 | 000000000 | Firstname Lastname ]
+        /// output formatted // ex. [ 0 | 000000000 | Firstname Lastname ]
             System.out.println("Total Students = " + myStudents.size());
-            //all students
+            // show all students
             showVectorLists(myStudents);
-            //myStudents >> [STUDENT1, STUDENT2(object id)]
-        //sort
+            // myStudents >> [STUDENT1, STUDENT2(object id)]
+        //sorting
         if(args.length > 0) { // if got argument
         System.out.print("\nAfter sorting by : ");
             switch(args[0]){ // switch by arguments 
@@ -66,19 +72,19 @@ public class assignment1 {
                     System.out.println("no argument found or wrong argument, skipped sorting /");
                 break;
             }
-            //lists after sorted
+            // lists after sorted
             showVectorLists(myStudents);
         }
-            //program end
-            scan.close();//clean up
+            // program end
+            scan.close();// clean up
             System.out.println("\n//////////////////////////////");
             System.out.println("/////////End of THE PROGRAM");
             System.out.println("//////////////////////////////");
     }
     //methods
     private static void showVectorLists(Vector<Student> v){
-        for(Student std : v){
-            System.out.println(std);
+        for(Student std : v){ // loop vector v into std
+            System.out.println(std); // sysout toString from Student class std
         }
     }
     public static void sort(Vector<Student> vList, final String field) {
