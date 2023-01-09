@@ -1,15 +1,31 @@
 # cmut4adt
     data structure subject in cmu assignment tutorial 4
-# how to use the program 
+# how to use command terminal <cmd>
     first you need to find your directory in cmd promt or vscode's terminal
-    it has to be folder before your project folder
+    to open command terminal you press the windowbutton and the type >> cmd
+    and then press enter
+    you can use cd ..
+    to go back one from directory
+    ex. this will be shown when you open cmd for the first time
+        C:\Users\Acer>
+    and then we want 
+        C:\Users\PowerNet\Documents\
+    we type 
+        cd ..
+        cd PowerNet
+        cd Documents
+    and then you will get the
+        C:\Users\PowerNet\Documents\
+
+# using the program
+    now you need to find the folder before your project folder
     ex. if we want to execute   C:\Users\PowerNet\Documents\GitHub\cmut4adt\assignm\assignment1.java
-                            and C:\Users\PowerNet\Documents\GitHub\cmut4adt\assignm\Student.java
+                          and   C:\Users\PowerNet\Documents\GitHub\cmut4adt\assignm\Student.java
     we cd on PS C:\Users\PowerNet\Documents\GitHub\cmut4adt>
     and then type javac .\assignm\assignment1.java .\assignm\Student.java   <<to complie the file before running>>
     type java .\assignm\assignment1.java                                    <<to run>>
-    // when you want to run with sorting to the data, adds an argument to the file
-    //
+    // when you want to run with sorting to the data, adds an argument to the file after the java [file] command
+    // ex. > java [file path] -argument0
 # SORTING BY STUDENT'S ID
     // java .\assignm\assignment1.java -n
     will run sorting by student's number
