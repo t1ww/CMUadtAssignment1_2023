@@ -26,6 +26,12 @@
     type java .\assignm\assignment1.java                                    <<to run>>
     // when you want to run with sorting to the data, adds an argument to the file after the java [file] command
     // ex. > java [file path] -argument0
+# lists of the arguments command
+    -n { sort the data by student id
+    -f { sort the data by first name
+    -l (lowercase L) 
+       { sort the data by last name (for students with middle name will be shown on top instead)
+
 # SORTING BY STUDENT'S ID
     // java .\assignm\assignment1.java -n
     will run sorting by student's number
