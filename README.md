@@ -1,3 +1,4 @@
+    note; you only have to download .java file ( and also .csv file for testing )
 # cmut4adt
     data structure subject in cmu assignment tutorial 4
 # how to use command terminal <cmd>
